@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
   def inventory
     self.inventory > 0 ? "true" : "false"
   end
-  
+
   private
   def product_params
     params.require(:product).permit(:name, :price, :description, :inventory)
