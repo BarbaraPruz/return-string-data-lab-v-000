@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.create(product_params)
-    redirect_to product
+    redirect_to products
   end
 
   private 
