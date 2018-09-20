@@ -16,6 +16,10 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+  def inventory
+    self.inventory > 0 ? "true" : "false"
+  end
+  
   private
   def product_params
     params.require(:product).permit(:name, :price, :description, :inventory)
